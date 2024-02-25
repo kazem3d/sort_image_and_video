@@ -42,7 +42,7 @@ def get_creation_month(file_path):
     persian_date = jdatetime.datetime.fromgregorian(datetime=create_date)
     # Get the month's full name in Persian
     persian_month_name = get_persian_month_name(persian_date.strftime('%b'))
-    return f'{persian_date.strftime("%Y")} {persian_month_name}'
+    return f'{persian_date.strftime("%Y/%m")} {persian_month_name}'
 
  
 def get_unique_filename(destination_dir, filename):
@@ -94,6 +94,6 @@ def search_and_sort_files(src_dir,dist_dir):
                 copy_file_with_unique_name(file_path,destination_folder,duplicates_folder)
 
 if __name__ == "__main__":
-    source_directory = "/media/darvin/My Book/src"
+    source_directory = "/media/darvin/My Book/kazem"
     distination_directory = "/media/darvin/My Book/dist"
     search_and_sort_files(source_directory,distination_directory)
